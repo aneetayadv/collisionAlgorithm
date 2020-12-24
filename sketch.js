@@ -27,4 +27,13 @@ function draw() {
     fixedRect.shapeColor = "green";
   }
   drawSprites();
+  
+  push();
+  stroke("white");
+  strokeWeight(4);
+  line(fixedRect.x,fixedRect.y,movingRect.x,movingRect.y);
+  pop();
+
+  fill("white");
+  text("Distance =  "+ (movingRect.x - fixedRect.x) + "  Sum of Width =  "+(fixedRect.width/2 + movingRect.width/2),mouseX,360);
 }
